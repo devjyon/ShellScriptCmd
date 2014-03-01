@@ -11,7 +11,12 @@ echo ${#renamePattern}
 
 echo ${renamePattern:0:1}
 
+#todo
+# prefix pre*
+# suffix *fix
 
 for f in `ls $1 | grep -v ^d`; do
   echo "$f -> $1$f"
+#  filenameRenamed=
+# mv "./$f ./$filenameRenamed"  
 done
