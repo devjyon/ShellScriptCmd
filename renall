@@ -1,0 +1,17 @@
+#!/bin/bash
+echo "target files : $#"
+
+echo "input rename pattern : "
+echo " ex) ab*"
+read renamePattern
+
+
+echo "renamePattern : $renamePattern"
+echo ${#renamePattern}
+
+echo ${renamePattern:0:1}
+
+
+for f in `ls $1 | grep -v ^d`; do
+  echo "$f -> $1$f"
+done
